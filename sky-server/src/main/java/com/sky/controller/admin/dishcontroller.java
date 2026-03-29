@@ -42,7 +42,7 @@ PageResult pageResult =dishservice.pageQuery(dishPageQueryDTO);
 
 @DeleteMapping
 @ApiOperation("菜品批量删除")
-public  Result delete( @PathVariable List<Long> ids)
+public  Result delete( @RequestParam List<Long> ids)
 {
     dishservice.deleteBatch(ids);
     return Result.success();
